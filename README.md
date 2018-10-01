@@ -6,23 +6,20 @@ Spring Security is one of the AOP feature.
 ## Setting up Spring Security:
 - Maven dependence update in pom.xml for Spring Security jars (spring-security-web, spring-security-config) and AOP(spring-aop).
 
-	<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-web</artifactId>
-		<version>4.0.1.RELEASE</version>
-  	</dependency>
 
        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>4.0.1.RELEASE</version>
-        </dependency>
-        
-	<dependency>
+        </dependency><dependency>
+		<groupId>org.springframework.security</groupId>	
+		<artifactId>spring-security-web</artifactId>	
+		<version>4.0.1.RELEASE</version>	
+  	</dependency>
+       	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-aop</artifactId>
-	    <version>4.2.5.RELEASE</version>
-	</dependency>        			
+	    <version>4.2.5.RELEASE</version></dependency>        			
 
 
 - create Spring Security Configuration class that inherites from WebSecurityConfigurerAdapter class.
