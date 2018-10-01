@@ -68,7 +68,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
 
-#While Testing:
+## While Testing:
 There are two things I would like to include here as Spring Security applies in our application which behaves differently and securely that it used to be with our Spring MVC app with simple log in page.
 - 1. Spring Security Provides build in log in page where user will be able to input user id and password. 
 - 2. Once user logged in successfully through log in page(provide by Spring Security) then use will see welcome page. Please note the url once get to welcome page. If user completely close the browser then again try the saved url on new page user will be redirected to the log in page.
