@@ -24,7 +24,7 @@ Setting up Spring Security:
 		</dependency>        			
 
 - create Spring Security Configuration class that inherites from WebSecurityConfigurerAdapter class.
-{
+
 package com.tyataacademy.springmvc.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +51,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.formLogin();
 	}
 }
-}
+
 
 
 - update web.xml (dispatcher servlet) with filters. We configure this for application to be able to intercept every request before it enter the controller. Then Request first goes to Spring Security. If no user is logged in, then user will automatically sent to login page.
