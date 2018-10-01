@@ -6,7 +6,6 @@ Spring Security is one of the AOP feature.
 ## Setting up Spring Security:
 - Maven dependence update in pom.xml for Spring Security jars (spring-security-web, spring-security-config) and AOP(spring-aop).
 
-
        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
@@ -19,25 +18,25 @@ Spring Security is one of the AOP feature.
        	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-aop</artifactId>
-	    <version>4.2.5.RELEASE</version></dependency>        			
+	    <version>4.2.5.RELEASE</version>
+	  </dependency>        			
 
 
 - create Spring Security Configuration class that inherites from WebSecurityConfigurerAdapter class.
 
+ package com.tyataacademy.springmvc.security;
 
-package com.tyataacademy.springmvc.security;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+    import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+    import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+    import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 
-@Configuration
-@EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+    @Configuration
+    @EnableWebSecurity
+    public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
@@ -52,7 +51,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/", "/*todo*/**").access("hasRole('USER')").and()
 				.formLogin();
 	}
-}
+    }
 
 
 
