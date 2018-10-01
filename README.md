@@ -35,9 +35,9 @@ Setting up Spring Security:
      import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
      import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-	@Configuration
-	@EnableWebSecurity
-	public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+@Configuration
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
 			throws Exception {
