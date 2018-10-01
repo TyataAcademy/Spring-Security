@@ -25,6 +25,7 @@ Setting up Spring Security:
 
 - create Spring Security Configuration class that inherites from WebSecurityConfigurerAdapter class.
 
+
      package com.tyataacademy.springmvc.security;
 
      import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +35,9 @@ Setting up Spring Security:
      import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
      import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-@Configuration
-@EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+	@Configuration
+	@EnableWebSecurity
+	public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
 			throws Exception {
