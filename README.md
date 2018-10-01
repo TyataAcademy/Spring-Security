@@ -57,15 +57,15 @@ Spring Security is one of the AOP feature.
 
 - update web.xml (dispatcher servlet) with filters. We configure this for application to be able to intercept every request before it enter the controller. Then Request first goes to Spring Security. If no user is logged in, then user will automatically sent to login page.
 
-   <filter>
-    		<filter-name>springSecurityFilterChain</filter-name>
-    		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-   </filter>
+      <filter>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+      </filter>
  
-   <filter-mapping>
-   		<filter-name>springSecurityFilterChain</filter-name>
-    		<url-pattern>/*</url-pattern>
-   </filter-mapping>     
+      <filter-mapping>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <url-pattern>/*</url-pattern>
+      </filter-mapping>     
 
 
 
